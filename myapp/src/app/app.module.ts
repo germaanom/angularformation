@@ -4,15 +4,17 @@ import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
+import { UpperCapitalPipe } from './hello/upper-capital.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    HelloComponent,
+    UpperCapitalPipe
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
