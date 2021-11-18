@@ -15,12 +15,14 @@ export class CreateEmpleadoComponent implements OnInit {
   loading = false;
   id: string | null;
   texto = 'Agregar empleado';
+  textobtn = 'Agregar';
 
   constructor(private fb: FormBuilder, 
               private _empleadoService: EmpleadoService, 
               private router: Router,
               private toastr: ToastrService, 
               private aRoute: ActivatedRoute) {
+
     this.createEmpleado = this.fb.group({
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
@@ -28,7 +30,6 @@ export class CreateEmpleadoComponent implements OnInit {
       salario: ['', Validators.required]
     })
     this.id = this.aRoute.snapshot.paramMap.get('id');
-    console.log(this.id);
    }
 
   ngOnInit(): void {
@@ -58,6 +59,7 @@ export class CreateEmpleadoComponent implements OnInit {
       fechaCreacion: new Date(),
       fechaActualizacion: new Date()
     }
+    
     this.loading = true;
     this._empleadoService.agregarEmpleado(empleado).then(() =>{
       this.toastr.success('El empleado fue registrado con exito!', 'Empleado registrado', {
@@ -85,6 +87,7 @@ export class CreateEmpleadoComponent implements OnInit {
         })
       })
       this.texto = 'Editar empleado'
+      this.textobtn= 'Editar'
     }
   }
 
