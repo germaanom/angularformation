@@ -3,9 +3,13 @@
         <div class="col-lg 3">
             <div class="card text-center">
                 <div class="card-body">
-                    <h3>Agregar Empleado</h3>
+                    <h3>{{ texto }}
+                        <div class="spinner-border float-end" role="status" *ngIf="loading">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                    </h3>
                     <span *ngIf="submitted && createEmpleado.invalid" class="badge bg-warning text-dark">TODOS LOS CAMPOS SON OBLIGATORIOS</span>
-                    <form class="mt-4" [formGroup]="createEmpleado" (ngSubmit)="agregarEmpleado()">
+                    <form class="mt-4" [formGroup]="createEmpleado" (ngSubmit)="agregarEditarEmpleado()">
                         <div class="row">
                             <div class="col">
                                 <input type="text" class="form-control form-control-lg" formControlName="nombre" placeholder="Nombre">
