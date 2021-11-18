@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "empleados-bfe32": {
+      "hosting": {
+        "empleados": [
+          "empleados-bfe32"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "empleados-bfe32"
+  }
+}

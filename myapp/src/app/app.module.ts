@@ -8,11 +8,13 @@ import { UpperCapitalPipe } from './hello/upper-capital.pipe';
 import { LoggerService } from './logger.service';
 import { GreetingsService } from './greeting.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     UpperCapitalPipe
+
   ],
   imports: [
     BrowserModule,
