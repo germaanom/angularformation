@@ -8,9 +8,10 @@ import { ListaEmpleadosComponent } from './components/lista-empleados/lista-empl
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateEmpleadoComponent } from './components/create-empleado/create-empleado.component';
 import { environment } from 'src/environments/environment';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './components/login/login.component'
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     AppComponent,
     ListaEmpleadosComponent,
     NavbarComponent,
-    CreateEmpleadoComponent
+    CreateEmpleadoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     AngularFirestoreModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
 
   ],
   providers: [],

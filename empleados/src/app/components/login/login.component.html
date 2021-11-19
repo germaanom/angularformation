@@ -1,0 +1,18 @@
+
+<div class="container login">
+    <div class="card text-center">
+        <div class="card-header">
+            <b>LOGIN</b>
+        </div>
+        <div class="card-body">
+            <div class="spinner-border" role="status" *ngIf="loading2">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <label>Email</label>
+            <input type="email" placeholder="Introduce tu email" [(ngModel)]="email">
+            <label>Password</label>
+            <input type="password" placeholder="Introduce tu contraseña" [(ngModel)]="password">
+            <button (click)="login()" class="btn btn-primary">Log-In</button>            
+        </div>
+    </div>
+</div>

@@ -6,7 +6,7 @@
                     <h3>{{ texto }}
                         <div class="spinner-border float-end" role="status" *ngIf="loading">
                             <span class="visually-hidden">Loading...</span>
-                          </div>
+                        </div>
                     </h3>
                     <span *ngIf="submitted && createEmpleado.invalid" class="badge bg-warning text-dark">TODOS LOS CAMPOS SON OBLIGATORIOS</span>
                     <form class="mt-4" [formGroup]="createEmpleado" (ngSubmit)="agregarEditarEmpleado()">

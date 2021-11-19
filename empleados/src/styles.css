@@ -3,7 +3,13 @@
 body{
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./assets/fondo.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;    
     background-size: cover;
     height: 100vh;
+}
+
+.login{
+    align-items: center;
+    justify-content: center;
+    width: 100vh;
 }
